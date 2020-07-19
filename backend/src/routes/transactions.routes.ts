@@ -35,7 +35,7 @@ transactionsRouter.get('/balance', async (request, response) => {
     contents: [
       {
         type: 'text',
-        text: `Olá Empresa,\nZenvia Financial informa:\n\nSua posição consolidada para o dia ${dataAtual} ficou em ${balanceFormatted.total}.`,
+        text: `Olá Empresa,\nOrganiZen informa:\n\nSua posição consolidada para o dia ${dataAtual} ficou em ${balanceFormatted.total}.`,
       },
     ],
   };
