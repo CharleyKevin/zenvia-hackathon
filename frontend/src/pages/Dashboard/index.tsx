@@ -75,10 +75,6 @@ const Dashboard: React.FC = () => {
     loadTransactions();
   }, []);
 
-  function sayHello() {
-    alert('Hello!');
-  }
-
   const [messageSucess, setMessageSucess] = useState('none');
 
   async function closeBox(): Promise<void> {

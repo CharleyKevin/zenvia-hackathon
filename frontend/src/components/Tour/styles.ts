@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Opacity = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: black;
   opacity: 0.7;
   z-index: 999;
