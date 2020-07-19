@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/recharts": "^1.8.14",
     "axios": "^0.19.2",
     "filesize": "^6.1.0",
     "history": "^4.10.1",
@@ -10,8 +11,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-dropzone": "^10.2.2",
+    "react-minimal-pie-chart": "^8.0.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
+    "recharts": "^1.8.5",
     "styled-components": "^5.1.0",
     "typescript": "~3.7.2"
   },
