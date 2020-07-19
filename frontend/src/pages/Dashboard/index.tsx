@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 
 import income from '../../assets/income.svg';
 import outcome from '../../assets/outcome.svg';
@@ -6,20 +7,15 @@ import total from '../../assets/total.svg';
 import robot from '../../assets/robot.svg';
 import close from '../../assets/IconColorclose.svg';
 
+import Modal from '../../components/Tour/index';
+
 import api from '../../services/api';
 
 import Header from '../../components/Header';
 
 import formatValue from '../../utils/formatValue';
 
-import {
-  Container,
-  CardContainer,
-  Card,
-  TableContainer,
-  Modal,
-  Opacity,
-} from './styles';
+import { Container, CardContainer, Card, TableContainer } from './styles';
 
 interface Transaction {
   id: string;
@@ -71,24 +67,15 @@ const Dashboard: React.FC = () => {
     loadTransactions();
   }, []);
 
+  function sayHello() {
+    alert('Hello!');
+  }
+
   return (
     <>
-      <Opacity />
+      <Modal />
       <Header />
       <Container>
-        <Modal>
-          <img className="close" src={close} alt="close" />
-          <img src={robot} alt="robot" />
-          <p className="mesage1">
-            Olá eu sou o Zen, responsável por lhe ensinar a conhecer a
-            plataforma da Zenvia.
-          </p>
-          <p className="mesage2">
-            Nossa plataforma foi atualizada e com isso novas funcionalidades
-            surgiram para tornar sua experiência mais simples, e aí vamo nessa?
-          </p>
-          <button type="button">Iniciar tour</button>
-        </Modal>
         <CardContainer>
           <Card>
             <header>

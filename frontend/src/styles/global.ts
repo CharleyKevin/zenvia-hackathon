@@ -20,4 +20,12 @@ export default createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  .none {
+    display: none !important;
+  }
+
+  .block {
+    display: block !important;
+  }
 `;
