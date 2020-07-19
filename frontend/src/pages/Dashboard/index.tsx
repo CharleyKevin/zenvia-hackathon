@@ -6,6 +6,7 @@ import outcome from '../../assets/outcome.svg';
 import total from '../../assets/total.svg';
 import robot from '../../assets/robot.svg';
 import close from '../../assets/IconColorclose.svg';
+import imageWhatsapp from '../../assets/whatsapp.png';
 
 import Modal from '../../components/Tour/index';
 
@@ -15,7 +16,14 @@ import Header from '../../components/Header';
 
 import formatValue from '../../utils/formatValue';
 
-import { Container, CardContainer, Card, TableContainer } from './styles';
+import {
+  Container,
+  CardContainer,
+  Card,
+  TableContainer,
+  Whatsapp,
+  Alert,
+} from './styles';
 
 interface Transaction {
   id: string;
@@ -71,9 +79,45 @@ const Dashboard: React.FC = () => {
     alert('Hello!');
   }
 
+  const [messageSucess, setMessageSucess] = useState('none');
+
+  async function closeBox(): Promise<void> {
+    try {
+      await api.get('transactions/balance');
+      setMessageSucess('');
+
+      setTimeout(function () {
+        setMessageSucess('none');
+      }, 2000);
+    } catch (err) {
+      console.log(err.response.error);
+    }
+  }
   return (
     <>
       <Modal />
+      <Alert className={messageSucess}>
+        <div className="alerts">
+          <div className="alert sucess">
+            <span className="alert-icon">
+              <i className="fas fa-check" />
+            </span>
+            <span className="alert-content">
+              <span className="alert-close">
+                <i className="fas fa-times" />
+              </span>
+              <span className="alert-title">Enviado com sucesso</span>
+              <span className="alert-subtitle" />
+            </span>
+          </div>
+        </div>
+      </Alert>
+      <Whatsapp>
+        <button type="button" onClick={closeBox}>
+          <img src={imageWhatsapp} alt="whatsapp" />
+          <p>Fechar Caixa</p>
+        </button>
+      </Whatsapp>
       <Header />
       <Container>
         <CardContainer>

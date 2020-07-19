@@ -40,6 +40,21 @@ export const PopupImport = styled.div`
   justify-content: center;
 `;
 
+export const PopupImportCloseBox = styled.div`
+  width: 500px;
+  height: 200px;
+  bottom: 100px;
+  left: calc(100% - 500px);
+  position: absolute;
+  z-index: 1000;
+  padding-top: 10px;
+  padding-left: 5px;
+  border-radius: 10px;
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+`;
+
 export const MessagePopup = styled.div`
   .close {
     position: absolute;
@@ -118,6 +133,47 @@ export const MessagePopupImport = styled.div`
   width: 227px;
   border-radius: 10px;
   padding-right: 10px;
+`;
+
+export const MessagePopupCloseBox = styled.div`
+  .close {
+    position: absolute;
+    right: 240px;
+    top: 15px;
+  }
+  .actionNext {
+    position: absolute;
+    right: 240px;
+    bottom: 75px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration-line: underline;
+    color: #ffffff;
+  }
+  button.tuor {
+    width: 175px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: #0073a9;
+    color: #fff;
+  }
+  p.mesage1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: left;
+
+    color: #ffffff;
+  }
+  background-color: #7d1e78;
+  padding-left: 10px;
+  height: 120px;
+  width: 227px;
+  border-radius: 10px;
+  padding-right: 10px;
+  bottom: 40px;
 `;
 
 export const Container = styled.div`

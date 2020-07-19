@@ -10,6 +10,7 @@ import {
   MessagePopup,
   PopupImport,
   MessagePopupImport,
+  PopupImportCloseBox,
 } from './styles';
 
 import Logo from '../../assets/logo-novo-zenvia.svg';
@@ -126,21 +127,21 @@ const Modal: React.FC = () => {
         </MessagePopupImport>
         <img src={robot} alt="robot" />
       </PopupImport>
-      <PopupImport className={popup3}>
+      <PopupImportCloseBox className={popup3}>
         <MessagePopupImport>
           <button type="button" onClick={closePopup}>
             <img className="close" src={closeWhite} alt="close" />
           </button>
           <p className="mesage1">
             Ao finalizar o dia, clique em FECHAR CAIXA. Os números cadastrados
-            receberam o balanço final do dia
+            receberão o balanço final do dia
           </p>
           <button type="button" onClick={closePopup}>
             <p className="actionNext">FINALIZAR</p>
           </button>
         </MessagePopupImport>
         <img src={robot} alt="robot" />
-      </PopupImport>
+      </PopupImportCloseBox>
     </>
   );
 };
