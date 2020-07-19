@@ -26,7 +26,7 @@ const Modal: React.FC = () => {
   const [popup3, setPopup3] = useState('none');
 
   function checkTour() {
-    if (document.cookie === 'done') {
+    if (localStorage.getItem('tour') === 'done') {
       closeModel();
     } else {
       openModel();
@@ -41,13 +41,13 @@ const Modal: React.FC = () => {
   function closeModel() {
     setModel('none');
     setOpacity('none');
-    document.cookie = 'done';
+    localStorage.setItem('tour', 'done');
   }
 
   function startTour() {
     closeModel();
     firstMesage();
-    document.cookie = 'done';
+    localStorage.setItem('tour', 'done');
   }
 
   function firstMesage() {

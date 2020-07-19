@@ -11,12 +11,21 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ size = 'large' }: HeaderProps) => {
+  function openModel() {
+    localStorage.removeItem('tour');
+    if (window.location.pathname === '/') {
+      document.location.reload(true);
+    }
+  }
+
   return (
     <Container size={size}>
       <header>
-        <img src={Logo} alt="GoFinances" />
+        <img src={Logo} alt="Zenvia" />
         <nav>
-          <Link to="/">Tour</Link>
+          <Link to="/" onClick={openModel}>
+            Tour
+          </Link>
           <Link to="/">Listagem</Link>
           <Link to="/import">Importar</Link>
         </nav>
