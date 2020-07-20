@@ -107,8 +107,9 @@ const Modal: React.FC = () => {
             <img className="close" src={closeWhite} alt="close" />
           </button>
           <p className="mesage1">
-            Aqui esta os dados de balanço do seu negócio, você pode acompanhar
-            as entradas e saídas e saber como está a saúde da sua empresa.
+            Aqui estão os dados do seu balanço diário. Você pode acompanhar as
+            entradas e saídas e saber como está a saúde financeira do seu
+            negócio.
           </p>
           <button type="button" onClick={nextSecondMesage}>
             <p className="actionNext">CONTINUAR</p>
@@ -120,7 +121,7 @@ const Modal: React.FC = () => {
           <button type="button" onClick={closePopup}>
             <img className="close" src={closeWhite} alt="close" />
           </button>
-          <p className="mesage1">Para inserir seus dados, clique em IMPORTAR</p>
+          <p className="mesage1">Para inserir os dados, clique em IMPORTAR.</p>
           <button type="button" onClick={nextThirdMesage}>
             <p className="actionNext">CONTINUAR</p>
           </button>
